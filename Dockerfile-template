@@ -1,0 +1,23 @@
+FROM ubuntu:16.04
+MAINTAINER Name Lastname <name.lastname@email.com>
+
+RUN apt-get update && apt-get install -y \
+things \
+and \
+stuff && \
+rm -rf /var/lib/apt/lists/* && \
+rm -rf /usr/share/locale/ /usr/share/man/ /root/.cache
+
+ADD . /directory
+
+WORKDIR /tmp
+
+CMD ["some", "command"]
+
+# And here's a basic centos start
+FROM centos:7
+
+RUN yum install -y \
+things \
+and \
+stuff
