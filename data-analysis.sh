@@ -4,6 +4,8 @@
 LC_ALL=C
 LANG=C
 
+source utilities.sh
+
 trap 'rm temporary files that were generated' EXIT SIGINT SIGKILL
 
 do-things

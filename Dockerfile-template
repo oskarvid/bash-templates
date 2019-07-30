@@ -16,8 +16,15 @@ CMD ["some", "command"]
 
 # And here's a basic centos start
 FROM centos:7
+MAINTAINER Name Lastname <name.lastname@email.com>
 
 RUN yum install -y \
 things \
 and \
 stuff
+
+ADD . /directory
+
+WORKDIR /tmp
+
+CMD ["some", "command"]

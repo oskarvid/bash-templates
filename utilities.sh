@@ -11,7 +11,7 @@ exec &> >(tee logfile.log)
 
 # put "trap die ERR" in the main script to use this in a trap that executes when there is an error in the script
 die () {
-	echo "Execution failed on line $BASH_LINENO in"
+	echo "Execution failed on line $BASH_LINENO"
 }
 
 # Use this is error messages and such
@@ -32,14 +32,16 @@ RED=$(tput setaf 1)
 GREEN=$(tput setaf 2)
 # Print yellow text
 YELLOW=$(tput setaf 3)
-# Print yellow text
+# Print blue text
 BLUE=$(tput setaf 4)
-# Print yellow text
+# Print magenta text
 MAGENTA=$(tput setaf 5)
-# Print yellow text
+# Print cyan text
 CYAN=$(tput setaf 6)
-# Print yellow text
+# Print white text
 WHITE=$(tput setaf 7)
+# Reset back to standard terminal color
+RESET=$(tput sgr 0)
 
 # Shows date in the format "YYYY-MM-DD hh:mm:ss"
 showdate () {
